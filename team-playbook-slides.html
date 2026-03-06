@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Operational Playbook — Slide Deck</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background-color: #F5F5F7;
+    color: #222426;
+    font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif;
+    line-height: 1.45;
+  }
+  section {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 44px 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    page-break-after: always;
+  }
+  .slide-number {
+    position: absolute;
+    bottom: 20px;
+    right: 36px;
+    font-size: 0.78em;
+    color: #94A8B2;
+  }
+  h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #222426;
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 1.7em;
+    font-weight: 700;
+    color: #7CA9EE;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #7CA9EE;
+    padding-bottom: 8px;
+  }
+  h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #222426;
+    margin: 16px 0 8px;
+  }
+  .subtitle { font-size: 1.3em; color: #94A8B2; }
+  .meta { font-size: 1em; color: #94A8B2; margin-top: 24px; }
+  .title-accent { width: 80px; height: 4px; background: #7CA9EE; margin-bottom: 24px; border-radius: 2px; }
+  .internal {
+    background: #FFF3E0; border: 1px solid #F0B582; border-radius: 8px;
+    padding: 10px 16px; font-size: 0.85em; margin-top: 20px; display: inline-block;
+  }
+  table {
+    border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 0.82em;
+  }
+  th {
+    background-color: #7CA9EE; color: #fff; padding: 8px 10px;
+    text-align: left; font-weight: 600;
+  }
+  td { padding: 7px 10px; border-bottom: 1px solid #ddd; }
+  tr:nth-child(even) { background-color: #eef3fa; }
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 0.78em; font-weight: 600; color: #fff;
+  }
+  .tier1 { background-color: #8FCB9A; }
+  .tier2 { background-color: #F5CF8B; color: #222426; }
+  .tier3 { background-color: #F0B582; color: #222426; }
+  .callout {
+    background: #fff; border-radius: 12px; padding: 16px 20px;
+    margin: 14px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .callout strong { color: #7CA9EE; }
+  .emulate td:first-child { color: #8FCB9A; font-weight: 700; }
+  .avoid td:first-child { color: #EC938E; font-weight: 700; }
+  .principle {
+    background: #fff; border-left: 4px solid #9596D4; border-radius: 0 10px 10px 0;
+    padding: 12px 16px; margin: 8px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .principle strong { color: #9596D4; }
+  .principle em { color: #94A8B2; font-size: 0.88em; }
+  .tree {
+    font-family: 'SF Mono', 'Menlo', monospace; font-size: 0.82em; line-height: 1.7;
+    background: #fff; border-radius: 12px; padding: 20px 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .columns { display: flex; gap: 16px; }
+  .col { flex: 1; }
+  .layer-moat { background: #e8f5e9; }
+  .layer-platform { background: #e3f2fd; }
+  .layer-recognition { background: #f3e5f5; }
+  .layer-identity { background: #fff8e1; }
+  @media print {
+    section { min-height: auto; height: 100vh; overflow: hidden; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: Title -->
+<section>
+  <div class="title-accent"></div>
+  <h1>Developer Recognition Programs</h1>
+  <p class="subtitle">Team Operational Playbook</p>
+  <div class="meta">
+    Audience: Developer Community Engagement Team &mdash; Internal Reference<br>
+    March 2026 &middot; Christa Rubenga &amp; Ricardo Navarro
+  </div>
+  <div class="internal">INTERNAL USE &mdash; Contains competitive intelligence and strategic recommendations. Do not distribute externally.</div>
+  <span class="slide-number">1</span>
+</section>
+
+<!-- SLIDE 2: Program Landscape (Top 9) -->
+<section>
+  <h2>1. Program Landscape &mdash; Tier 1 &amp; 2</h2>
+  <table>
+    <tr><th>#</th><th>Program</th><th>Company</th><th>Size</th><th>Tier</th><th>Selection</th><th>Score</th><th>Key Strength</th><th>Key Weakness</th></tr>
+    <tr><td>1</td><td>MVP</td><td>Microsoft</td><td>~3K&ndash;4K</td><td><span class="badge tier1">T1</span></td><td>Nomination + annual</td><td>446</td><td>Scale, longevity, benefits</td><td>Exclusivity diluted</td></tr>
+    <tr><td>2</td><td>GDE</td><td>Google</td><td>~1K&ndash;1.2K</td><td><span class="badge tier1">T1</span></td><td>Nom + tech interview</td><td>424</td><td>Technical vetting quality</td><td>Employee-nom bottleneck</td></tr>
+    <tr><td>3</td><td>MVP</td><td>Salesforce</td><td>~200&ndash;300</td><td><span class="badge tier1">T1</span></td><td>Community + self-nom</td><td>415</td><td>Gamification + integration</td><td>Badge hierarchy complexity</td></tr>
+    <tr><td>4</td><td>Stars</td><td>GitHub</td><td>~50&ndash;80</td><td><span class="badge tier1">T1</span></td><td>Community nom only</td><td>376</td><td>Platform-native badge</td><td>Small cohort</td></tr>
+    <tr><td>5</td><td>Data Heroes</td><td>Snowflake</td><td>~50&ndash;100</td><td><span class="badge tier2">T2</span></td><td>Periodic cohort</td><td>370</td><td>Branding + announcements</td><td>Narrow ecosystem</td></tr>
+    <tr><td>6</td><td>ACE</td><td>Adobe</td><td>~200&ndash;400</td><td><span class="badge tier2">T2</span></td><td>Annual cohort</td><td>356</td><td>20+ year longevity</td><td>Lower visibility</td></tr>
+    <tr><td>7</td><td>ACE</td><td>Oracle</td><td>~500&ndash;700</td><td><span class="badge tier2">T2</span></td><td>Annual + tiered</td><td>355</td><td>Tiered progression</td><td>Enterprise-heavy</td></tr>
+    <tr><td>8</td><td>Heroes</td><td>AWS</td><td>~250&ndash;350</td><td><span class="badge tier2">T2</span></td><td>Internal nom, 4-stage</td><td>353</td><td>9 category specializations</td><td>Lower distinctiveness</td></tr>
+    <tr><td>9</td><td>Captains</td><td>Docker</td><td>~60&ndash;100</td><td><span class="badge tier2">T2</span></td><td>Application + annual</td><td>348</td><td>Burnout mitigation</td><td>Small impact</td></tr>
+  </table>
+  <span class="slide-number">2</span>
+</section>
+
+<!-- SLIDE 3: Program Landscape (Tier 3 + Scoring) -->
+<section>
+  <h2>1. Program Landscape &mdash; Tier 3 &amp; Scoring</h2>
+  <div class="columns">
+    <div class="col">
+      <h3>Tier 3 Programs</h3>
+      <table>
+        <tr><th>#</th><th>Program</th><th>Company</th><th>Score</th><th>Status</th></tr>
+        <tr><td>10</td><td>Heroes</td><td>JetBrains</td><td>310</td><td>Active</td></tr>
+        <tr><td>11</td><td>Program</td><td>MongoDB</td><td>285</td><td>Active</td></tr>
+        <tr><td>12</td><td>Contributors</td><td>Elastic</td><td>270</td><td>Restructured</td></tr>
+        <tr><td>13</td><td>Ambassadors</td><td>HashiCorp</td><td>260</td><td>Uncertain</td></tr>
+        <tr><td>14</td><td>Program</td><td>Twilio</td><td>240</td><td>May be paused</td></tr>
+        <tr><td>15</td><td>Initiatives</td><td>NVIDIA</td><td>220</td><td>Fragmented</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <h3>Scoring Criteria (10 Dimensions, 500 pts)</h3>
+      <table>
+        <tr><th>Dimension</th><th>Weight</th></tr>
+        <tr><td>Selection &amp; Governance</td><td>50 pts</td></tr>
+        <tr><td>Benefits &amp; Value Exchange</td><td>50 pts</td></tr>
+        <tr><td>Member Obligations</td><td>40 pts</td></tr>
+        <tr><td>Community Integration</td><td>50 pts</td></tr>
+        <tr><td>Announcement Model</td><td>40 pts</td></tr>
+        <tr><td>Scalability &amp; Sustainability</td><td>50 pts</td></tr>
+        <tr><td>Gamification &amp; Progression</td><td>40 pts</td></tr>
+        <tr><td>Global &amp; DEI Reach</td><td>40 pts</td></tr>
+        <tr><td>Technical Quality Signal</td><td>50 pts</td></tr>
+        <tr><td>Brand &amp; Positioning</td><td>40 pts</td></tr>
+      </table>
+    </div>
+  </div>
+  <span class="slide-number">3</span>
+</section>
+
+<!-- SLIDE 4: Positioning Archetypes -->
+<section>
+  <h2>2. Positioning Archetypes</h2>
+  <table>
+    <tr><th>Archetype</th><th>Exemplar</th><th>Positioning</th><th>Apple Learning</th></tr>
+    <tr><td><strong>Authority &amp; Scale</strong></td><td>Microsoft MVP</td><td>"Passionate experts who make exceptional contributions"</td><td>Scale doesn't equal quality &mdash; 3K+ dilutes exclusivity</td></tr>
+    <tr><td><strong>Meritocratic Expertise</strong></td><td>Google GDE</td><td>"Experienced, recognized developers"</td><td>Interview-based selection signals earned credibility &mdash; fits Apple brand</td></tr>
+    <tr><td><strong>Generous Community</strong></td><td>Salesforce MVP</td><td>"Lead, inspire, and educate"</td><td>Generosity as criterion; integrated identity across learning + community</td></tr>
+    <tr><td><strong>Workflow-Native</strong></td><td>GitHub Stars</td><td>"People who inspire and educate others"</td><td>Badge in daily workflow &mdash; put badge on developer.apple.com profiles</td></tr>
+    <tr><td><strong>Hero Branding</strong></td><td>Snowflake</td><td>"#SnowflakeDataHero"</td><td>Persistent hashtag identity; cohort reveals as marketing events</td></tr>
+    <tr><td><strong>Intimate Peer Bonds</strong></td><td>Docker Captains</td><td>"Experts passionate about sharing"</td><td>Small cohort = genuine relationships; alumni track prevents burnout</td></tr>
+  </table>
+  <div class="callout">
+    <strong>Apple's opportunity:</strong> Synthesize quality-first (GDE) + integrated identity (Salesforce) + platform-native visibility (GitHub Stars) into a positioning no competitor can replicate.
+  </div>
+  <span class="slide-number">4</span>
+</section>
+
+<!-- SLIDE 5: Community Platforms — Independent -->
+<section>
+  <h2>3. Community Platform Analysis &mdash; Independent</h2>
+  <table>
+    <tr><th>Platform</th><th>Model</th><th>Key Feature</th><th>Apple Insight</th></tr>
+    <tr><td><strong>Stack Overflow</strong></td><td>Q&amp;A</td><td>Accepted answers, reputation, 3 badge tiers</td><td>Adopt accepted-answer model; avoid unwelcoming culture</td></tr>
+    <tr><td><strong>GitHub Discussions</strong></td><td>Repo-native Q&amp;A</td><td>Categories, accepted answers, contribution graph</td><td>Discussions contextual to development workflow</td></tr>
+    <tr><td><strong>Dev.to</strong></td><td>Community publishing</td><td>Positive-only reactions (no downvotes)</td><td>Adopt positive-only engagement to reduce toxicity</td></tr>
+    <tr><td><strong>Hashnode</strong></td><td>Blog network</td><td>Custom domains, content ownership</td><td>Content ownership drives higher quality</td></tr>
+    <tr><td><strong>Swift Forums</strong></td><td>Governance-integrated</td><td>Swift Evolution, Apple engineer participation</td><td>Already Apple's &mdash; extend model to Community tab</td></tr>
+    <tr><td><strong>Reddit</strong></td><td>Social discussion</td><td>WWDC megathreads, ~390K members</td><td>Replicate WWDC megathread model</td></tr>
+    <tr><td><strong>Hacker News</strong></td><td>Link aggregator</td><td>Austere design, transparent moderation</td><td>Quality-first through design; transparent moderation builds trust</td></tr>
+  </table>
+  <span class="slide-number">5</span>
+</section>
+
+<!-- SLIDE 6: Community Platforms — Program-Affiliated -->
+<section>
+  <h2>3. Community Platform Analysis &mdash; Program-Affiliated</h2>
+  <table>
+    <tr><th>Platform</th><th>Company</th><th>Key Feature</th><th>Apple Insight</th></tr>
+    <tr><td><strong>Tech Community + Learn</strong></td><td>Microsoft</td><td>Verified employee answers; gamified learning</td><td style="color:#EC938E;"><strong>Avoid fragmentation</strong> &mdash; users struggle across 4 properties</td></tr>
+    <tr><td><strong>Dev Community + GDGs</strong></td><td>Google</td><td>1,000+ local chapters in 140+ countries</td><td>Consider meetup chapter model; keep primary on developer.apple.com</td></tr>
+    <tr><td><strong>Trailblazer + Trailhead</strong></td><td>Salesforce</td><td>Unified learning + community + recognition</td><td style="color:#8FCB9A;"><strong>#1 benchmark</strong> &mdash; integrate WWDC + tutorials + badges under one ID</td></tr>
+    <tr><td><strong>re:Post + community.aws</strong></td><td>AWS</td><td>Knowledge Center + community Q&amp;A</td><td>Official tech notes as baseline; community answers supplementing</td></tr>
+    <tr><td><strong>Developer Hub</strong></td><td>Twilio</td><td>TwilioQuest gamified learning (discontinued 2023)</td><td style="color:#EC938E;"><strong>Cautionary tale</strong> &mdash; only build gamification you can sustain</td></tr>
+    <tr><td><strong>Docker Hub + Forums</strong></td><td>Docker</td><td>Pull count as organic reputation signal</td><td>App Store IS Apple's Docker Hub &mdash; app publishing as contribution</td></tr>
+    <tr><td><strong>Discuss.Elastic.co</strong></td><td>Elastic</td><td>Complexity-driven organic Q&amp;A</td><td>SwiftUI, visionOS, concurrency are complex enough to drive Q&amp;A</td></tr>
+  </table>
+  <span class="slide-number">6</span>
+</section>
+
+<!-- SLIDE 7: Patterns to Emulate (1-8) -->
+<section>
+  <h2>4. Patterns to Emulate (1&ndash;8)</h2>
+  <table class="emulate">
+    <tr><th>#</th><th>Pattern</th><th>Source</th><th>Apple Application</th></tr>
+    <tr><td>1</td><td>Interview-based selection</td><td>Google GDE</td><td>Technical interview ensures genuine expertise; fits quality-first brand</td></tr>
+    <tr><td>2</td><td>Annual renewal with clear criteria</td><td>All top programs</td><td>Healthy engagement cycle without being burdensome</td></tr>
+    <tr><td>3</td><td>Platform-native profile badge</td><td>GitHub Stars</td><td>Badge on developer.apple.com visible in App Store Connect and forums</td></tr>
+    <tr><td>4</td><td>Tiered progression</td><td>Oracle ACE</td><td>Contributor &rarr; recognized member &rarr; emeritus path</td></tr>
+    <tr><td>5</td><td>Alumni track with sabbatical</td><td>Docker Captains</td><td>Prevent burnout &mdash; only one program does this</td></tr>
+    <tr><td>6</td><td>Cohort announcements as events</td><td>Snowflake</td><td>Annual cohort announcement at WWDC</td></tr>
+    <tr><td>7</td><td>Accepted answers in Q&amp;A</td><td>Stack Overflow, re:Post</td><td>Essential for Community tab Discussions</td></tr>
+    <tr><td>8</td><td>Integrated learning + community</td><td>Salesforce Trailblazer</td><td>WWDC + tutorials + badges + community under one Developer ID</td></tr>
+  </table>
+  <span class="slide-number">7</span>
+</section>
+
+<!-- SLIDE 8: Patterns to Emulate (9-16) -->
+<section>
+  <h2>4. Patterns to Emulate (9&ndash;16)</h2>
+  <table class="emulate">
+    <tr><th>#</th><th>Pattern</th><th>Source</th><th>Apple Application</th></tr>
+    <tr><td>9</td><td>Knowledge Center + community Q&amp;A</td><td>AWS re:Post</td><td>Official tech notes as baseline; community answers supplement</td></tr>
+    <tr><td>10</td><td>Verified employee answers</td><td>Microsoft Q&amp;A, re:Post</td><td>Apple engineer answers marked as authoritative &mdash; massive trust signal</td></tr>
+    <tr><td>11</td><td>Local chapter network</td><td>Google GDG</td><td>Apple Developer Meetup program with local chapters worldwide</td></tr>
+    <tr><td>12</td><td>App registry as reputation</td><td>Docker Hub</td><td>App Store downloads/ratings as organic, ungameable reputation</td></tr>
+    <tr><td>13</td><td>Community blog contributions</td><td>AWS community.aws</td><td>Community tutorials on developer.apple.com with editorial curation</td></tr>
+    <tr><td>14</td><td>Positive-only engagement</td><td>Dev.to</td><td>No downvotes on community content; reduces toxicity</td></tr>
+    <tr><td>15</td><td>Transparent moderation</td><td>Hacker News</td><td>Public moderation decisions build trust</td></tr>
+    <tr><td>16</td><td>WWDC megathreads</td><td>Reddit r/iOSProgramming</td><td>Auto-create discussion threads for each WWDC session</td></tr>
+  </table>
+  <span class="slide-number">8</span>
+</section>
+
+<!-- SLIDE 9: Patterns to Avoid -->
+<section>
+  <h2>5. Patterns to Avoid</h2>
+  <table class="avoid">
+    <tr><th>#</th><th>Anti-Pattern</th><th>Source</th><th>Risk for Apple</th></tr>
+    <tr><td>1</td><td>Paywall on developer content</td><td>Medium</td><td>Alienates community; Apple content should be free</td></tr>
+    <tr><td>2</td><td>Opaque selection criteria</td><td>Most programs</td><td>Creates perception of favoritism; publish criteria and weights</td></tr>
+    <tr><td>3</td><td>Gamification without quality gates</td><td>General</td><td>Drives volume over quality; badge spam</td></tr>
+    <tr><td>4</td><td>No burnout mitigation</td><td>All except Docker</td><td>Burnout is #1 attrition driver</td></tr>
+    <tr><td>5</td><td>No published DEI targets</td><td>All programs</td><td>Apple can be first to publish</td></tr>
+    <tr><td>6</td><td>Fragmented multi-property community</td><td>Microsoft</td><td>Users can't find what they need across 4 sites</td></tr>
+    <tr><td>7</td><td>Delegating Q&amp;A to Stack Overflow</td><td>Google, Twilio</td><td>Lose control of experience and data</td></tr>
+    <tr><td>8</td><td>Over-complex badge hierarchy</td><td>Salesforce</td><td>Hundreds of badges dilutes meaning; keep 10&ndash;20</td></tr>
+    <tr><td>9</td><td>Unsustainable creative features</td><td>Twilio</td><td>Only build what you can maintain indefinitely</td></tr>
+    <tr><td>10</td><td>Fragmented sub-programs</td><td>NVIDIA</td><td>Multiple disconnected programs dilute identity</td></tr>
+    <tr><td>11</td><td>Downvote-heavy culture</td><td>Stack Overflow</td><td>Unwelcoming to beginners; hurts new contributors</td></tr>
+  </table>
+  <span class="slide-number">9</span>
+</section>
+
+<!-- SLIDE 10: Design Principles (1-5) -->
+<section>
+  <h2>6. Design Principles (1&ndash;5)</h2>
+  <div class="principle">
+    <strong>01 &mdash; Quality Over Quantity</strong> <em>(Google GDE, GitHub Stars)</em><br>
+    Interview-based selection ensures genuine expertise. Small cohorts (20&ndash;80) preserve exclusivity and brand safety.
+  </div>
+  <div class="principle">
+    <strong>02 &mdash; Platform-Native Recognition</strong> <em>(GitHub Stars, Adobe ACE)</em><br>
+    Badge on developer.apple.com profile, visible in App Store Connect, forums, and documentation contributions.
+  </div>
+  <div class="principle">
+    <strong>03 &mdash; Integrated Identity</strong> <em>(Salesforce Trailblazer)</em><br>
+    WWDC sessions + tutorials + badges + community under one Developer ID. Single profile, unified experience.
+  </div>
+  <div class="principle">
+    <strong>04 &mdash; Tiered Aspiration</strong> <em>(Oracle ACE)</em><br>
+    Contributor &rarr; recognized member &rarr; emeritus. Clear progression with escalating benefits. Lowers entry barrier.
+  </div>
+  <div class="principle">
+    <strong>05 &mdash; Sustainability First</strong> <em>(Docker Captains)</em><br>
+    Sabbatical option: 1 quarter off per year. Alumni track for graceful exit. Burnout is #1 attrition driver.
+  </div>
+  <span class="slide-number">10</span>
+</section>
+
+<!-- SLIDE 11: Design Principles (6-10) -->
+<section>
+  <h2>6. Design Principles (6&ndash;10)</h2>
+  <div class="principle">
+    <strong>06 &mdash; Positive-Only Engagement</strong> <em>(Dev.to)</em><br>
+    No downvotes on community content. Reduce toxicity, welcome beginners.
+  </div>
+  <div class="principle">
+    <strong>07 &mdash; Organic Credibility</strong> <em>(Docker Hub &rarr; App Store)</em><br>
+    App Store data &mdash; shipped apps, downloads, Design Awards &mdash; as unfakeable, ungameable reputation signals.
+  </div>
+  <div class="principle">
+    <strong>08 &mdash; Editorial Curation</strong> <em>(AWS community.aws, Twilio Voices)</em><br>
+    Community tutorials published on developer.apple.com with editorial review. Quality-gated, not open-firehose.
+  </div>
+  <div class="principle">
+    <strong>09 &mdash; Complexity Drives Engagement</strong> <em>(Elastic Community)</em><br>
+    SwiftUI, visionOS, Swift concurrency, Combine are complex enough to drive organic Q&amp;A. The need already exists.
+  </div>
+  <div class="principle">
+    <strong>10 &mdash; Transparent Governance</strong> <em>(Hacker News, Swift Forums)</em><br>
+    Publish selection criteria. Public moderation decisions. DEI targets. Outcomes dashboards. No program does all four &mdash; Apple can be first.
+  </div>
+  <span class="slide-number">11</span>
+</section>
+
+<!-- SLIDE 12: Community Tab IA -->
+<section>
+  <h2>7. Community Tab &mdash; Information Architecture</h2>
+  <div class="tree">
+Community (Landing/Home)<br>
+├── <strong>Connect</strong> &mdash; Groups &amp; Meetups, Office Hours, Regional Cohorts, Partner Communities<br>
+├── <strong>Contribute</strong> &mdash; Q&amp;A, Documentation Feedback, Code Samples, Tutorials, Translations<br>
+├── <strong>Learn</strong> &mdash; Community Guides, WWDC Collections, Study Paths, Workshops, Mentoring<br>
+├── <strong>Programs &amp; Recognition</strong> &mdash; Overview &amp; Criteria, Contributor Badges, Pathways, Alumni<br>
+├── <strong>Discussions (Forums)</strong> &mdash; Q&amp;A Hub, WWDC Session Threads, Framework-Specific, Career<br>
+├── <strong>Events</strong> &mdash; Calendar (filterable, time-zone aware), Replays Archive, Office Hours Booking<br>
+├── <strong>Showcase</strong> &mdash; App Spotlights, Technical Case Studies, Filters by Framework<br>
+└── <strong>Moderation &amp; Policy</strong> &mdash; Code of Conduct, Reporting, Enforcement Ladder, Transparency Reports
+  </div>
+  <span class="slide-number">12</span>
+</section>
+
+<!-- SLIDE 13: Landing Page Modules -->
+<section>
+  <h2>7. Community Tab &mdash; Landing Page Modules</h2>
+  <table>
+    <tr><th>Module</th><th>Content</th></tr>
+    <tr><td><strong>Hero + 3 CTAs</strong></td><td>Connect, Contribute, Learn &mdash; with contextual blurbs and action buttons</td></tr>
+    <tr><td><strong>Programs Overview</strong></td><td>How to get involved with clear eligibility links</td></tr>
+    <tr><td><strong>Popular Paths</strong></td><td>"Find a meetup," "Ask a question," "Publish a tutorial," "Join office hours"</td></tr>
+    <tr><td><strong>Events</strong></td><td>Upcoming events (time-zone aware) + on-demand learning</td></tr>
+    <tr><td><strong>Featured Creators</strong></td><td>Showcase apps/case studies with opt-in editorial</td></tr>
+    <tr><td><strong>For You (signed-in)</strong></td><td>Framework- and region-aware suggestions; nudges based on profile</td></tr>
+  </table>
+  <span class="slide-number">13</span>
+</section>
+
+<!-- SLIDE 14: Phased Rollout -->
+<section>
+  <h2>8. Phased Rollout</h2>
+  <table>
+    <tr><th>Phase</th><th>Scope</th><th>Timeline</th><th>FTE</th><th>Risk</th></tr>
+    <tr>
+      <td><strong>Pilot (Year 1)</strong></td>
+      <td>Small curated cohort. Nomination + interview-based selection. Published criteria, alumni pathway, DEI targets.</td>
+      <td>30&ndash;60 days</td><td>2&ndash;5</td><td>Low</td>
+    </tr>
+    <tr>
+      <td><strong>Expand (Year 2)</strong></td>
+      <td>Grow cohort. Add open contributor badges (Q&amp;A, docs, translations). WWDC integration: session threads, lab booking.</td>
+      <td>Year 2</td><td>4&ndash;7</td><td>Medium</td>
+    </tr>
+    <tr>
+      <td><strong>Scale (Year 3+)</strong></td>
+      <td>Contribution ladder with points + leaderboards. Anti-abuse infrastructure. Regional meetup chapters. Xcode integration.</td>
+      <td>Year 3+</td><td>6&ndash;10</td><td>Higher</td>
+    </tr>
+  </table>
+  <span class="slide-number">14</span>
+</section>
+
+<!-- SLIDE 15: 90-Day Pilot Plan -->
+<section>
+  <h2>8. 90-Day Pilot Plan</h2>
+  <table>
+    <tr><th>Weeks</th><th>Phase</th><th>Activities</th></tr>
+    <tr><td><strong>1&ndash;2</strong></td><td>Foundation</td><td>Finalize selection criteria. Build nomination pipeline. Begin Community tab wireframes. Draft Code of Conduct, COI policy, DEI targets. Create interview rubric.</td></tr>
+    <tr><td><strong>3&ndash;4</strong></td><td>Selection</td><td>Open nominations. Conduct technical + community interviews. Select initial cohort. Prepare onboarding materials.</td></tr>
+    <tr><td><strong>5&ndash;8</strong></td><td>Launch</td><td>Onboard members (NDA briefings, private channels). Launch Community tab beta. Initial Q&amp;A, tutorials, showcase. Begin editorial cadence.</td></tr>
+    <tr><td><strong>9&ndash;12</strong></td><td>Measure</td><td>Track engagement metrics. Gather member and community feedback. Prepare Year 2 recommendation.</td></tr>
+  </table>
+  <span class="slide-number">15</span>
+</section>
+
+<!-- SLIDE 16: Success Metrics & Resourcing -->
+<section>
+  <h2>8. Success Metrics &amp; Resourcing</h2>
+  <div class="columns">
+    <div class="col">
+      <h3>Success Metrics</h3>
+      <table>
+        <tr><th>Metric</th><th>What It Measures</th></tr>
+        <tr><td>Contributor Conversion</td><td>Visitor &rarr; registered &rarr; first contribution</td></tr>
+        <tr><td>Answer Quality</td><td>Accepted answer rate, upvote ratios</td></tr>
+        <tr><td>Member Retention</td><td>Annual renewal rate, sabbatical usage</td></tr>
+        <tr><td>Content Quality</td><td>Editorial acceptance rate, community upvotes</td></tr>
+        <tr><td>Satisfaction Pulse</td><td>Quarterly NPS survey</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <h3>Resourcing</h3>
+      <table>
+        <tr><th>Model</th><th>Core Team</th><th>FTE</th></tr>
+        <tr><td>Curated cohort</td><td>Lead + ops + editorial</td><td>2&ndash;5</td></tr>
+        <tr><td>Hybrid (+ badges)</td><td>Above + badge admin</td><td>4&ndash;7</td></tr>
+        <tr><td>Contribution ladder</td><td>Above + anti-abuse eng</td><td>6&ndash;10</td></tr>
+      </table>
+    </div>
+  </div>
+  <span class="slide-number">16</span>
+</section>
+
+<!-- SLIDE 17: Announcement Strategy -->
+<section>
+  <h2>9. Announcement Strategy &mdash; 5 Models</h2>
+  <table>
+    <tr><th>Model</th><th>Source</th><th>How It Works</th></tr>
+    <tr><td><strong>Cohort-as-Event</strong></td><td>Snowflake, Salesforce</td><td>Periodic reveals as marketing moments. Creates anticipation and engagement.</td></tr>
+    <tr><td><strong>Annual Fixed Date</strong></td><td>Microsoft, Google, Oracle</td><td>Predictable renewal cycle. Builds annual rhythm.</td></tr>
+    <tr><td><strong>Rolling / Continuous</strong></td><td>GitHub Stars, AWS</td><td>Always-open pipeline. Lower barrier but less event energy.</td></tr>
+    <tr><td><strong>Editorial Spotlight</strong></td><td>Docker, Adobe, JetBrains</td><td>Individual member stories through company channels.</td></tr>
+    <tr><td><strong>Platform-Native Visibility</strong></td><td>GitHub Stars, Adobe</td><td>Badge on profile = passive broadcast. Every view is an announcement.</td></tr>
+  </table>
+  <div class="callout">
+    <strong>Recommendation:</strong> Combine <strong>Cohort-as-Event</strong> (announce at WWDC) + <strong>Platform-Native</strong> (badge on profiles). Every forum post becomes a passive announcement.
+  </div>
+  <span class="slide-number">17</span>
+</section>
+
+<!-- SLIDE 18: Announcement — What to Copy / Avoid -->
+<section>
+  <h2>9. Announcement Strategy &mdash; Copy &amp; Avoid</h2>
+  <div class="columns">
+    <div class="col">
+      <h3 style="color:#8FCB9A;">What to Copy</h3>
+      <table>
+        <tr><th>Tactic</th><th>Source</th></tr>
+        <tr><td>Quarterly cohort storytelling</td><td>AWS Heroes</td></tr>
+        <tr><td>Two-beat cadence (nominations + reveal)</td><td>Salesforce MVP</td></tr>
+        <tr><td>Members woven into WWDC, not just on a slide</td><td>Microsoft MVP</td></tr>
+        <tr><td>Grassroots amplification with templates</td><td>Microsoft, HashiCorp</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <h3 style="color:#EC938E;">What to Avoid</h3>
+      <table>
+        <tr><th>Anti-Pattern</th><th>Risk</th></tr>
+        <tr><td>Single annual spike then silence</td><td>Sustain visibility year-round</td></tr>
+        <tr><td>Corporate-voice-only amplification</td><td>Low engagement</td></tr>
+        <tr><td>Scale without stories</td><td>"1,400 in 66 countries" lands flat</td></tr>
+        <tr><td>Opaque celebration</td><td>Pair with visible criteria</td></tr>
+        <tr><td>Ignoring LinkedIn</td><td>Professional status matters there</td></tr>
+      </table>
+    </div>
+  </div>
+  <span class="slide-number">18</span>
+</section>
+
+<!-- SLIDE 19: Strategic Framework -->
+<section>
+  <h2>10. Strategic Framework</h2>
+  <p style="margin-bottom:20px;">Four-layer model synthesizing all 15 program analyses and 15 community platform studies:</p>
+  <table style="font-size:0.95em;">
+    <tr><th>Layer</th><th>Name</th><th>Components</th></tr>
+    <tr class="layer-moat">
+      <td><strong>4 (Moat)</strong></td><td>Apple Advantages</td>
+      <td>WWDC integration (200+ sessions) &middot; App Store credibility signals &middot; Xcode-native community &middot; Documentation deep-linking &middot; Multilingual global reach</td>
+    </tr>
+    <tr class="layer-platform">
+      <td><strong>3</strong></td><td>Community Platform</td>
+      <td>Community Tab IA: Connect &middot; Contribute &middot; Learn &middot; Programs &amp; Recognition &middot; Discussions &middot; Events &middot; Showcase &middot; Moderation</td>
+    </tr>
+    <tr class="layer-recognition">
+      <td><strong>2</strong></td><td>Recognition Tiers</td>
+      <td>Open: Contributor badges (Q&amp;A, docs, code, translations) &rarr; Curated: Program cohort (annual renewal) &rarr; Honor: Emeritus (alumni with standing)</td>
+    </tr>
+    <tr class="layer-identity">
+      <td><strong>1 (Foundation)</strong></td><td>Identity</td>
+      <td>Apple Developer ID as unified profile &mdash; badges, rank, contributions, App Store data, WWDC history, shipped apps, Design Awards &mdash; one identity across all touchpoints</td>
+    </tr>
+  </table>
+  <div class="callout" style="margin-top:20px;">
+    <strong>Closest structural analog:</strong> Salesforce Trailblazer &mdash; proprietary ecosystem, annual flagship conference, rich first-party learning, enterprise + indie developers. Adopt this integration pattern while keeping badge hierarchy simpler.
+  </div>
+  <span class="slide-number">19</span>
+</section>
+
+</body>
+</html>

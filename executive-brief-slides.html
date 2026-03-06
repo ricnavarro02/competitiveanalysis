@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Brief — Developer Recognition Programs</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background-color: #F5F5F7;
+    color: #222426;
+    font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+  }
+  section {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    page-break-after: always;
+  }
+  .slide-number {
+    position: absolute;
+    bottom: 24px;
+    right: 40px;
+    font-size: 0.8em;
+    color: #94A8B2;
+  }
+  h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #222426;
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #7CA9EE;
+    margin-bottom: 32px;
+    border-bottom: 3px solid #7CA9EE;
+    padding-bottom: 12px;
+  }
+  h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #222426;
+    margin: 20px 0 8px;
+  }
+  .subtitle {
+    font-size: 1.3em;
+    color: #94A8B2;
+    margin-bottom: 8px;
+  }
+  .meta {
+    font-size: 1em;
+    color: #94A8B2;
+    margin-top: 24px;
+  }
+  .title-accent {
+    width: 80px;
+    height: 4px;
+    background: #7CA9EE;
+    margin-bottom: 24px;
+    border-radius: 2px;
+  }
+  p {
+    font-size: 1.15em;
+    max-width: 900px;
+    margin-bottom: 16px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 16px 0;
+    font-size: 0.95em;
+  }
+  th {
+    background-color: #7CA9EE;
+    color: #fff;
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #ddd;
+  }
+  tr:nth-child(even) { background-color: #eef3fa; }
+  .takeaway-block {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .takeaway-block h3 {
+    color: #7CA9EE;
+    margin-top: 0;
+    font-size: 1.15em;
+  }
+  .takeaway-block p {
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+  .advantage-list {
+    list-style: none;
+    padding: 0;
+  }
+  .advantage-list li {
+    padding: 14px 20px;
+    margin: 8px 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    font-size: 1.05em;
+    border-left: 4px solid #8FCB9A;
+  }
+  .advantage-list li strong {
+    color: #7CA9EE;
+  }
+  .phase-table td:first-child {
+    font-weight: 700;
+    color: #7CA9EE;
+  }
+  .principles {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    column-gap: 32px;
+  }
+  .principles li {
+    padding: 8px 0;
+    font-size: 1em;
+    break-inside: avoid;
+    border-bottom: 1px solid #e8e8ed;
+    margin-bottom: 4px;
+  }
+  .principles li strong { color: #7CA9EE; }
+  .highlight { color: #7CA9EE; font-weight: 600; }
+  @media print {
+    section { min-height: auto; height: 100vh; overflow: hidden; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: Title -->
+<section>
+  <div class="title-accent"></div>
+  <h1>Developer Recognition Programs</h1>
+  <p class="subtitle">Competitive Landscape Brief</p>
+  <div class="meta">
+    Prepared for Executive Review<br>
+    March 2026<br>
+    Contributors: Christa Rubenga &amp; Ricardo Navarro
+  </div>
+  <span class="slide-number">1</span>
+</section>
+
+<!-- SLIDE 2: Why This Matters -->
+<section>
+  <h2>Why This Matters</h2>
+  <p>Apple is exploring a developer recognition program and a new <strong>Community tab</strong> on developer.apple.com.</p>
+  <p>This brief synthesizes findings from <span class="highlight">15 recognition programs</span> and <span class="highlight">15 community platforms</span> to inform strategic direction.</p>
+  <div style="margin-top: 32px; display: flex; gap: 24px;">
+    <div class="takeaway-block" style="flex:1; text-align:center;">
+      <h3>15</h3>
+      <p>Recognition programs analyzed</p>
+    </div>
+    <div class="takeaway-block" style="flex:1; text-align:center;">
+      <h3>15</h3>
+      <p>Community platforms studied</p>
+    </div>
+    <div class="takeaway-block" style="flex:1; text-align:center;">
+      <h3>10</h3>
+      <p>Scoring dimensions (500 pts)</p>
+    </div>
+  </div>
+  <span class="slide-number">2</span>
+</section>
+
+<!-- SLIDE 3: Competitive Landscape -->
+<section>
+  <h2>Competitive Landscape at a Glance</h2>
+  <table>
+    <tr>
+      <th>Program</th><th>Company</th><th>Size</th><th>Key Strength</th><th>Key Weakness</th>
+    </tr>
+    <tr>
+      <td><strong>MVP</strong></td><td>Microsoft</td><td>~3,000&ndash;4,000</td>
+      <td>Scale, longevity, benefits depth</td><td>Exclusivity diluted at scale</td>
+    </tr>
+    <tr>
+      <td><strong>Developer Experts (GDE)</strong></td><td>Google</td><td>~1,000&ndash;1,200</td>
+      <td>Technical vetting quality (interview-based)</td><td>Employee-nomination bottleneck</td>
+    </tr>
+    <tr>
+      <td><strong>MVP (Trailblazer)</strong></td><td>Salesforce</td><td>~200&ndash;300</td>
+      <td>Gamification + learning integration</td><td>Over-complex badge hierarchy</td>
+    </tr>
+    <tr>
+      <td><strong>Stars</strong></td><td>GitHub</td><td>~50&ndash;80</td>
+      <td>Platform-native workflow integration</td><td>Small cohort limits reach</td>
+    </tr>
+    <tr>
+      <td><strong>Heroes</strong></td><td>AWS</td><td>~250&ndash;350</td>
+      <td>Category specialization (9 categories)</td><td>Lower brand distinctiveness</td>
+    </tr>
+    <tr>
+      <td><strong>Captains</strong></td><td>Docker</td><td>~60&ndash;100</td>
+      <td>Only program with burnout mitigation</td><td>Small size limits impact</td>
+    </tr>
+  </table>
+  <p style="font-size:0.9em; color:#94A8B2; margin-top:12px;">Six additional programs evaluated (Oracle ACE, Snowflake Data Heroes, Adobe ACE, JetBrains Heroes, HashiCorp Ambassadors, Twilio). Full analysis in supporting report.</p>
+  <span class="slide-number">3</span>
+</section>
+
+<!-- SLIDE 4: Three Strategic Takeaways -->
+<section>
+  <h2>Three Strategic Takeaways</h2>
+  <div style="display: flex; gap: 20px;">
+    <div class="takeaway-block" style="flex:1;">
+      <h3>1. Quality bar is the differentiator &mdash; not scale</h3>
+      <p>The highest-regarded programs (Google GDE, GitHub Stars) are selective and interview-based. Microsoft MVP at 3,000+ is widely seen as diluted. <strong>A small, curated cohort signals quality</strong> &mdash; consistent with Apple's brand.</p>
+    </div>
+    <div class="takeaway-block" style="flex:1;">
+      <h3>2. No program sets the standard on transparency</h3>
+      <p><strong>Zero programs</strong> publish DEI targets. <strong>Zero</strong> publish conflict-of-interest policies. <strong>Only Docker</strong> offers burnout mitigation. This is a wide-open opportunity for Apple to define the industry standard.</p>
+    </div>
+    <div class="takeaway-block" style="flex:1;">
+      <h3>3. The community platform opportunity is larger than recognition</h3>
+      <p>Only Salesforce fully integrates learning, community, and recognition under one identity. Every other company fragments across multiple sites. <strong>A unified Community tab would be a structural advantage.</strong></p>
+    </div>
+  </div>
+  <span class="slide-number">4</span>
+</section>
+
+<!-- SLIDE 5: Apple's Unique Advantages -->
+<section>
+  <h2>Where Apple Has Unique Advantages</h2>
+  <p style="margin-bottom:24px;">Differentiators no competitor program can replicate:</p>
+  <ul class="advantage-list">
+    <li><strong>WWDC integration</strong> &mdash; 200+ sessions/year create a built-in content engine and community moments</li>
+    <li><strong>App Store credibility signals</strong> &mdash; Shipped apps, downloads, and Design Awards are verifiable, ungameable reputation markers</li>
+    <li><strong>Xcode-native access</strong> &mdash; Community Q&amp;A surfaced from within the development environment</li>
+    <li><strong>Documentation deep-linking</strong> &mdash; Community answers linked to official, current, versioned docs</li>
+    <li><strong>Global multilingual reach</strong> &mdash; Apple operates in dozens of languages; localization serves the global developer base far better than English-only alternatives</li>
+  </ul>
+  <span class="slide-number">5</span>
+</section>
+
+<!-- SLIDE 6: Recommended Path Forward -->
+<section>
+  <h2>Recommended Path Forward</h2>
+  <p style="font-size:1.2em; font-weight:600; color:#7CA9EE; margin-bottom:24px;">Start curated. Earn trust. Scale with evidence.</p>
+  <table class="phase-table">
+    <tr><th>Phase</th><th>Scope</th><th>Timeline</th><th>Investment</th></tr>
+    <tr>
+      <td>Pilot</td>
+      <td>Small curated cohort (nomination + interview-based selection)</td>
+      <td>30&ndash;60 days</td><td>2&ndash;5 FTE</td>
+    </tr>
+    <tr>
+      <td>Expand</td>
+      <td>Grow cohort + add open contributor recognition (badges for Q&amp;A, docs, translations)</td>
+      <td>Year 2</td><td>4&ndash;7 FTE</td>
+    </tr>
+    <tr>
+      <td>Scale</td>
+      <td>Contribution ladder, regional meetup chapters, Xcode integration</td>
+      <td>Year 3+</td><td>6&ndash;10 FTE</td>
+    </tr>
+  </table>
+
+  <h3 style="margin-top:28px;">Key Design Principles</h3>
+  <ul class="principles">
+    <li><strong>Interview-based selection</strong> ensures genuine expertise (Google GDE model)</li>
+    <li><strong>Annual renewal</strong> with published criteria creates healthy engagement cycles</li>
+    <li><strong>Platform-native badge</strong> on developer.apple.com profiles (GitHub Stars model)</li>
+    <li><strong>Tiered progression:</strong> Contributor &rarr; recognized member &rarr; emeritus (Oracle ACE)</li>
+    <li><strong>Alumni/sabbatical track</strong> prevents burnout (Docker Captains &mdash; only program that does this)</li>
+  </ul>
+  <span class="slide-number">6</span>
+</section>
+
+</body>
+</html>
